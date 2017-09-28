@@ -6,7 +6,7 @@ RSpec.feature "User submits a link" do
     link_url = "http://testingrailsbook.com"
 
     visit root_path
-    
+
     click_on "Submit a new link"
     fill_in "link_title", with: link_title
     fill_in "link_url", with: link_url

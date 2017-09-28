@@ -1,3 +1,11 @@
 <h1>Links#index</h1>
 
 <%= link_to "Submit a new link", new_link_path %>
+
+
+<% @links.each do |link| %>
+<br>
+<%= link_to link.url do %>
+  <%= link.title %>
+<% end %>
+<% end %>
