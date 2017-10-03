@@ -10,13 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170926022833) do
+ActiveRecord::Schema.define(version: 20171003012459) do
 
   create_table "links", force: :cascade do |t|
     t.string "url"
     t.string "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "upvotes", default: 0, null: false
+    t.integer "downvotes", default: 0, null: false
   end
 
 end
